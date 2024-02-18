@@ -21,7 +21,7 @@ pipeline{
                     readProp = readProperties file: 'build.properties'
                 }
                 echo "This is running on ${readProp['deploy.type']}"
-                deploy adapters: [tomcat9(credentialsId: 'c84c6b99-1efa-4eee-82a0-f0da1b1d0941', path: '', url: 'http://localhost:8080/')], contextPath: null, war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: 'c84c6b99-1efa-4eee-82a0-f0da1b1d0941', path: '', url: 'http://localhost:8085/')], contextPath: null, war: '**/*.war'
             }
         }
     }
